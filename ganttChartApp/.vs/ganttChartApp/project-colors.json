@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f11edb55-1484-4018-b0ef-58bd3369faa2": {
+      "ProjectGuid": "f11edb55-1484-4018-b0ef-58bd3369faa2",
+      "DisplayName": "ganttChartApp",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
