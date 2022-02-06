@@ -7,7 +7,6 @@ C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\bin\Debug\Sy
 C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\bin\Debug\Syncfusion.Chart.Base.xml
 C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\bin\Debug\Syncfusion.Chart.Windows.xml
 C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\bin\Debug\Syncfusion.Shared.Base.xml
-C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\obj\Debug\ganttChartApp.csproj.AssemblyReference.cache
 C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\obj\Debug\ganttChartApp.csproj.SuggestedBindingRedirects.cache
 C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\obj\Debug\ganttChartApp.Form1.resources
 C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\obj\Debug\ganttChartApp.Properties.Resources.resources
@@ -30,3 +29,4 @@ C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\bin\Debug\Sy
 C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\bin\Debug\Syncfusion.SfInput.WinForms.xml
 C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\bin\Debug\Syncfusion.SfListView.WinForms.xml
 C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\bin\Debug\Syncfusion.DataSource.WinForms.xml
+C:\Users\Infam\OneDrive\Documents\GitHub\cameron-work\ganttChartApp\obj\Debug\ganttChartApp.csproj.AssemblyReference.cache

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ganttChartApp
 {
-    public class productModel
+    public class comsoalModel
     {
         //Implement SQL db Conneections later
         string productName;
@@ -17,54 +17,50 @@ namespace ganttChartApp
         double robotProcessingTime;
         double workerProcessingTime;
         string followingTask;
-        bool compelete;
+       
 
         public string ProductName
         {
-            get {return productName;}
+            get { return productName; }
             set { productName = value; }
         }
         public int TaskNumber
         {
-            get { return taskNumber;}
+            get { return taskNumber; }
             set { taskNumber = value; }
         }
         public int NumOfPrecedences
         {
-            get { return numOfPrecedences;}
-            set { numOfPrecedences = value;}
+            get { return numOfPrecedences; }
+            set { numOfPrecedences = value; }
         }
         public bool RobotTask
         {
-            get { return robotTask;}
+            get { return robotTask; }
             set { robotTask = value; }
         }
         public bool WorkerTask
         {
-            get { return workerTask;}
+            get { return workerTask; }
             set { workerTask = value; }
         }
         public double RobotProcessingTime
         {
-            get { return robotProcessingTime;}
+            get { return robotProcessingTime; }
             set { robotProcessingTime = value; }
         }
         public double WorkerProcessingTime
         {
-            get { return workerProcessingTime;}
+            get { return workerProcessingTime; }
             set { workerProcessingTime = value; }
         }
         public string FollowingTask
         {
-            get { return followingTask;}
+            get { return followingTask; }
             set { followingTask = value; }
         }
-        public bool Compelete
-        {
-            get { return compelete;}   
-            set { compelete = value; }
-        }
-        public productModel(string productName, int taskNumber, int numberofprecedences,bool robotTask, bool workerTask, double robotprocesingtime, double workerprocessingtime,string followingtask,bool complete)
+       
+        public comsoalModel(string productName, int taskNumber, int numberofprecedences, bool robotTask, bool workerTask, double robotprocesingtime, double workerprocessingtime, string followingtask)
         {
             this.ProductName = productName;
             this.TaskNumber = taskNumber;
@@ -73,8 +69,7 @@ namespace ganttChartApp
             this.RobotTask = robotTask;
             this.RobotProcessingTime = robotprocesingtime;
             this.WorkerProcessingTime = workerprocessingtime;
-            this.FollowingTask = followingtask;
-            this.Compelete = complete;
+            this.FollowingTask = followingtask;            
         }
     }
 }
