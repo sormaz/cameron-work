@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="comsoalCollection.cs" />
     <Compile Include="comsoalModel.cs" />
+    <Compile Include="cordinatesModel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

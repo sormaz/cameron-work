@@ -39,7 +39,7 @@ namespace ganttChartApp
             double robotT = 0;
             double workerT = 0;
             int maxNumParts = 0;
-            string followingTask = null;
+            string followingTask = "";
             bool completedTask = false;
 
             //2 = max number of products
@@ -64,7 +64,7 @@ namespace ganttChartApp
                     else if (totalTaskNum == 13) { numOfPrecedences = 2; robot = true; worker = true; robotT = 5; workerT = 7; followingTask = "14"; completedTask = false; }
                     else if (totalTaskNum == 14) { numOfPrecedences = 2; robot = true; worker = false; robotT = 9; workerT = 0; followingTask = ""; completedTask = false; }
 
-                    _products.Add(new productModel($"Product {i}", totalTaskNum, numOfPrecedences, robot, worker, robotT, workerT, followingTask, completedTask));
+                    Products.Add(new productModel($"Product {i}", totalTaskNum, numOfPrecedences, robot, worker, robotT, workerT, followingTask, completedTask));
 
                     maxNumParts = j;
                 }

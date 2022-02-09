@@ -9,14 +9,14 @@ namespace ganttChartApp
     public class comsoalModel
     {
         //Implement SQL db Conneections later
-        string productName;
-        int taskNumber;
-        int numOfPrecedences;
-        bool robotTask;
-        bool workerTask;
-        double robotProcessingTime;
-        double workerProcessingTime;
-        string followingTask;
+        private string productName;
+        private int taskNumber;
+        private int numOfPrecedences;
+        private bool robotTask;
+        private bool workerTask;
+        private double robotProcessingTime;
+        private double workerProcessingTime;
+        private string followingTask;
        
 
         public string ProductName

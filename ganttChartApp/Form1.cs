@@ -7,14 +7,16 @@ namespace ganttChartApp
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
+
         }
         comsoalCollection con = new comsoalCollection();
+
         public ChartSeries series;
-        string resourceName = null;
-        int resourceLevel = 0;
+        public ChartSeries series2;
 
         //Grab current static data for Datagridview
         private void Form1_Load(object sender, EventArgs e)
@@ -23,47 +25,17 @@ namespace ganttChartApp
             {
                 productCollectionModel productCollectionModel = new productCollectionModel();
                 sfDataGrid1.DataSource = productCollectionModel.Products;
+                ////Create new series for product 1 and 2
+                series = new ChartSeries($"Worker", ChartSeriesType.Gantt);
+                series2 = new ChartSeries($"Robot", ChartSeriesType.Gantt);
+                ////Add chartdata for series 1 and 2
+                this.chartControl1.Series.Add(series);
+                this.chartControl1.Series.Add(series2);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        public void SendingTaskSelection(int taskNumber, string resource, double currentCompletionTime, double processingTime)
-        {
-            //reset chart level
-            resourceLevel = 0;
-            //update if new
-            if (resourceName == null)
-            {
-                resourceName = resource;
-                ////Create new series
-                series = new ChartSeries($"{resourceName}", ChartSeriesType.Gantt);
-                ////plot points translated from modified COMSOAL procedure
-                series.Points.Add(resourceLevel, currentCompletionTime, processingTime);
-            }
-            //add to exisiting level
-            else if (resourceName == resource)
-            {
-                series.Points.Add(resourceLevel, currentCompletionTime, processingTime);
-            }
-            //Create new series and add to level
-            else if (resourceName != resource)
-            {
-                series = new ChartSeries($"{resourceName}", ChartSeriesType.Gantt);
-                resourceLevel = resourceLevel + 1;
-                series.Points.Add(resourceLevel, currentCompletionTime, processingTime);
-            }
-
-
-            ////Add the point to chart
-            this.chartControl1.Series.Add(series);
-        }
-
-        private void btnGenerate_Click(object sender, EventArgs e)
-        {
-            con.GenerateNewSchedule();
         }
         //// Create chart series and add data points into it.
         //ChartSeries series = new ChartSeries($"{resourceName}", ChartSeriesType.Gantt);
@@ -78,5 +50,26 @@ namespace ganttChartApp
         //// Add the series to the chart series collection.
 
         //this.chartControl1.Series.Add(series);
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            con.GenerateNewSchedule();
+            foreach (cordinatesModel cords in con.Cords)
+            {
+                //robot
+                if (cords.X == 0)
+                {
+                    series2.Points.Add(cords.X,cords.Y,cords.Z);
+                }
+                //worker
+                else if (cords.X == 1)
+                {
+                    series.Points.Add(cords.X, cords.Y, cords.Z);
+                }
+                ////Add chartdata for series 1 and 2
+                this.chartControl1.Series.Add(series);
+                this.chartControl1.Series.Add(series2);
+            }
+        }
     }
 }
