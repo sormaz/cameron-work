@@ -44,7 +44,8 @@ namespace ganttChartApp
             while (true)
             {
                 //start generating first interval
-                foreach (productModel product in con.Products)
+                //Rename products to tasks
+                foreach (TaskModel product in con.Products)
                 {
                     if (precedenceCount > product.NumOfPrecedences)
                     {
@@ -71,7 +72,7 @@ namespace ganttChartApp
                     availableTaskCount += 1;
                 }
                 //Get probability of each
-                probability = 1 / availableTaskCount * 100;
+                probability = 1 / AvailableTasks.Count * 100;
                 //Get random number
                 int rn = Random.Next(0, 100);
                 //check available tasks list

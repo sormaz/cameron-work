@@ -7,10 +7,10 @@ namespace ganttChartApp
     public class productCollectionModel
     {
 
-        private ObservableCollection<productModel> _products;
+        private ObservableCollection<TaskModel> _products;
 
         //Reference to call on and set product infomation
-        public ObservableCollection<productModel> Products
+        public ObservableCollection<TaskModel> Products
         {
             get { return _products; }
             set { _products = value; }
@@ -19,7 +19,7 @@ namespace ganttChartApp
         //creates the new product collection used in form load
         public productCollectionModel()
         {
-            _products = new ObservableCollection<productModel>();
+            _products = new ObservableCollection<TaskModel>();
             this.GenerateProducts();
         }
 
@@ -64,7 +64,7 @@ namespace ganttChartApp
                     else if (totalTaskNum == 13) { numOfPrecedences = 2; robot = true; worker = true; robotT = 5; workerT = 7; followingTask = "14"; completedTask = false; }
                     else if (totalTaskNum == 14) { numOfPrecedences = 2; robot = true; worker = false; robotT = 9; workerT = 0; followingTask = ""; completedTask = false; }
 
-                    Products.Add(new productModel($"Product {i}", totalTaskNum, numOfPrecedences, robot, worker, robotT, workerT, followingTask, completedTask));
+                    Products.Add(new TaskModel($"Product {i}", totalTaskNum, numOfPrecedences, robot, worker, robotT, workerT, followingTask, completedTask));
 
                     maxNumParts = j;
                 }
