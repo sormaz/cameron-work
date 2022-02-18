@@ -1,0 +1,21 @@
+Resource,Product,Task,Precedence,ProcessTime
+Robot,Product 1,T1,2/3,5
+Robot,Product 1,T2,4,3
+Worker,Product 1,T2,4,6
+Worker,Product 1,T3,5,13
+Robot,Product 1,T4,6/7,3
+Robot,Product 1,T5,6,3
+Worker,Product 1,T5,6,6
+Robot,Product 1,T6,7,7
+Worker,Product 1,T6,7,12
+Worker,Product 1,T7,,4
+Worker,Product 2,T8,9/10/11,9
+Robot,Product 2,T9,12,3
+Worker,Product 2,T9,12,5
+Robot,Product 2,T10,13,4
+Robot,Product 2,T11,13,2
+Worker,Product 2,T11,13,4
+Worker,Product 2,T12,14,6
+Robot,Product 2,T13,14,5
+Worker,Product 2,T13,14,7
+Robot,Product 2,T14,,9

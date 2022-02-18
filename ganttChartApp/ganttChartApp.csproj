@@ -58,19 +58,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="comsoalCollection.cs" />
-    <Compile Include="comsoalModel.cs" />
-    <Compile Include="cordinatesModel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="productCollectionModel.cs" />
-    <Compile Include="TaskModel.cs" />
+    <Compile Include="Classes\ProcessClass.cs" />
+    <Compile Include="Classes\ProductClass.cs" />
+    <Compile Include="Classes\ResourceClass.cs" />
+    <Compile Include="Classes\TaskClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\WorkStationClass.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
