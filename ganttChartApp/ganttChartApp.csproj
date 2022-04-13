@@ -33,6 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="Syncfusion.Chart.Base, Version=19.4460.0.38, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Chart.Windows, Version=19.4460.0.38, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Core.WinForms, Version=19.4460.0.38, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -64,10 +66,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\ProcessClass.cs" />
-    <Compile Include="Classes\ProductClass.cs" />
-    <Compile Include="Classes\ResourceClass.cs" />
-    <Compile Include="Classes\TaskClass.cs" />
+    <Compile Include="Classes\Process.cs" />
+    <Compile Include="Classes\Product.cs" />
+    <Compile Include="Classes\Resource.cs" />
+    <Compile Include="Classes\Task.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\WorkStationClass.cs" />
@@ -92,6 +94,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TestCSVFile\testCSVFile.csv" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

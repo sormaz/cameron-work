@@ -28,26 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
             this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.sfDataGrid1 = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             this.btnGenerate = new Syncfusion.WinForms.Controls.SfButton();
             this.btnClearDT = new Syncfusion.WinForms.Controls.SfButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newTasksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.importFileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.sfDataGrid1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,16 +77,16 @@
             this.chartControl1.Title.Name = "Default";
             this.chartControl1.Titles.Add(this.chartControl1.Title);
             this.chartControl1.ToolBar.EnableDefaultItems = false;
-            this.chartControl1.ToolBar.Items.Add(chartToolBarSaveItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarCopyItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarPrintItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarPrintPreviewItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarSplitter1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarPaletteItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarStyleItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarTypeItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarSeries3DItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarShowLegendItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarSaveItem2);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarCopyItem2);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarPrintItem2);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarPrintPreviewItem2);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarSplitter2);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarPaletteItem2);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarStyleItem2);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarTypeItem2);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarSeries3DItem2);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarShowLegendItem2);
             this.chartControl1.VisualTheme = "";
             // 
             // sfDataGrid1
@@ -140,9 +138,7 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.addToolStripMenuItem,
-            this.importFileToolStripMenuItem});
+            this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1532, 28);
@@ -151,35 +147,22 @@
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importFileToolStripMenuItem1});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newTasksToolStripMenuItem});
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
-            this.addToolStripMenuItem.Text = "Add";
-            // 
-            // newTasksToolStripMenuItem
-            // 
-            this.newTasksToolStripMenuItem.Name = "newTasksToolStripMenuItem";
-            this.newTasksToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
-            this.newTasksToolStripMenuItem.Text = "New Tasks";
-            this.newTasksToolStripMenuItem.Click += new System.EventHandler(this.newTasksToolStripMenuItem_Click);
-            // 
-            // importFileToolStripMenuItem
-            // 
-            this.importFileToolStripMenuItem.Name = "importFileToolStripMenuItem";
-            this.importFileToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
-            this.importFileToolStripMenuItem.Text = "Import File";
-            this.importFileToolStripMenuItem.Click += new System.EventHandler(this.importFileToolStripMenuItem_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // importFileToolStripMenuItem1
+            // 
+            this.importFileToolStripMenuItem1.Name = "importFileToolStripMenuItem1";
+            this.importFileToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.importFileToolStripMenuItem1.Text = "Open file";
+            this.importFileToolStripMenuItem1.Click += new System.EventHandler(this.importFileToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -212,10 +195,8 @@
         private Syncfusion.WinForms.Controls.SfButton btnClearDT;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newTasksToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importFileToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem importFileToolStripMenuItem1;
     }
 }
 

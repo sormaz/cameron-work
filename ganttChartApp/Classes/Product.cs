@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace ganttChartApp
 {
-    public class ProductClass
+    public class Product
     {
-        private ObservableCollection<TaskClass> _tasks = new ObservableCollection<TaskClass>();
-        public ObservableCollection<TaskClass> Tasks
+        private ObservableCollection<Task> _tasks = new ObservableCollection<Task>();
+        public ObservableCollection<Task> Tasks
         {
             get { return _tasks; }
             set { _tasks = value; }
@@ -21,15 +21,27 @@ namespace ganttChartApp
             get { return name; }
             set { name = value; }
         }
-        public ProductClass(string name)
+        public Product(string name)
         {
             this.Name = name;
         }
 
-        public void addTask(TaskClass t)
+        public void addTask(Task t)
         {
             Tasks.Add(t);
             t.Product = this;
         }
+        public Task FindTask(string tn)
+        {
+            foreach (Task t in Tasks)
+            {
+                if (t.Name == tn)
+                {
+                    return t;
+                }
+            }
+            throw new Exception($"Task with name {tn} not found");
+        }
+
     }
 }
