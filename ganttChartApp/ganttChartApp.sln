@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ganttChartApp", "ganttChartApp.csproj", "{F11EDB55-1484-4018-B0EF-58BD3369FAA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ur_Rtde", "..\..\..\..\Desktop\RTDE_Console_App\Ur_Rtde.csproj", "{1DB2E7EC-5FA2-4206-9E23-1F0781CD9234}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ur_Rtde", "..\RTDE_Console_App\Ur_Rtde.csproj", "{1DB2E7EC-5FA2-4206-9E23-1F0781CD9234}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -30,7 +30,6 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using Mycode;
 
 namespace Ur_Rtde
 {
@@ -192,7 +191,6 @@ namespace Ur_Rtde
         }
     }
 
-   
     public class RtdeClient
     {
         enum RTDE_Command
@@ -217,7 +215,6 @@ namespace Ur_Rtde
 
         public event EventHandler OnDataReceive;
         public event EventHandler OnSockClosed;
-      
 
         byte Outputs_Recipe_Id, Inputs_Recipe_Id; // from the Robot point of view
 
@@ -245,7 +242,7 @@ namespace Ur_Rtde
             }
             catch { return false; }
         }
-        
+
         private void AsynchReceive(IAsyncResult ar)
         {
             int bytesRead = sock.Client.EndReceive(ar);
@@ -294,7 +291,6 @@ namespace Ur_Rtde
 
                         if (OnDataReceive != null)
                             OnDataReceive(this, null);
-                        Send_Ur_Inputs();
                     }
                 }
                 catch {}
@@ -393,8 +389,6 @@ namespace Ur_Rtde
 
             return true;
         }
-
-        //Builds the reciepes from the UR_DATA
         private bool Setup_Ur_InputsOutputs(RTDE_Command Cmd, object UrStruct, out IEncoderDecoder[] encoder, double Frequency = 1)
         {
             // Get the public fields in the structure 
@@ -447,7 +441,6 @@ namespace Ur_Rtde
             return false;
         }
 
-        //default freq was 125
         public bool Setup_Ur_Outputs(object UrStruct, double Frequency=1)
         {
             this.UrStructOuput = UrStruct;
