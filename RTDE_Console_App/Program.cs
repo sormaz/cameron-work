@@ -20,7 +20,8 @@ namespace Mycode
             Ur3.OnSockClosed += new EventHandler(Ur3_OnSockClosed);
 
             //Attempt to connect to RTDE server host protocol version 2
-            Ur3.Connect("192.168.50.84", 2);
+            Ur3.Connect("10.130.252.69",2);
+            //Ur3.Connect("192.168.50.84", 2);
 
 
             // Register Inputs (UR point of view)
@@ -30,7 +31,7 @@ namespace Mycode
 
             // Original Register Outputs (UR point of view), for an update frequency 10Hz
             // Register Outputs (UR point of view), for an update frequency 1Hz
-            Console.WriteLine(Ur3.Setup_Ur_Outputs(UrOutputs, 1));
+            Console.WriteLine(Ur3.Setup_Ur_Outputs(UrOutputs, 10));
 
             
 
@@ -63,23 +64,21 @@ namespace Mycode
         // Data change Event 
         static void Ur3_OnDataReceive(object sender, EventArgs e)
         {
-            
-
-            setp1[0] = -0.12f;
-            setp1[1] = -0.33f;
-            setp1[2] = 0.14f;
+            setp1[0] = -.12f;
+            setp1[1] = -0.51f;
+            setp1[2] = 0.0f;
             setp1[3] = 0f;
-            setp1[4] = 3.11f;
-            setp1[5] = 0.04f;
+            setp1[4] = -3.11f;
+            setp1[5] = 0.00f;
 
-            setp2[0] = -0.12f;
+            setp2[0] = -.12f;
             setp2[1] = -0.51f;
-            setp2[2] = 0.21f;
+            setp2[2] = 0.01f;
             setp2[3] = 0f;
-            setp2[4] = 3.11f;
-            setp2[5] = 0.04f;
+            setp2[4] = -3.11f;
+            setp2[5] = 0.00f;
 
-            if (newsetp==setp1)
+            if (newsetp == setp1)
             {
                 newsetp = setp2;
             }
@@ -94,10 +93,10 @@ namespace Mycode
             UrInputs.input_double_register_4 = newsetp[4];
             UrInputs.input_double_register_5 = newsetp[5];
 
-            Console.WriteLine(UrInputs.input_double_register_0 + " " + UrInputs.input_double_register_1 + " " + UrInputs.input_double_register_2 + " " + UrInputs.input_double_register_3 + " " + UrInputs.input_double_register_4 + " " + UrInputs.input_double_register_5);
-            
+            //Console.WriteLine(UrInputs.input_double_register_0 + " " + UrInputs.input_double_register_1 + " " + UrInputs.input_double_register_2 + " " + UrInputs.input_double_register_3 + " " + UrInputs.input_double_register_4 + " " + UrInputs.input_double_register_5);
+
             //Notice Info is giving in radians
-            //Console.WriteLine(UrOutputs.actual_q[0] + " " + UrOutputs.actual_q[1] + " " + UrOutputs.actual_q[2] + " " + UrOutputs.actual_q[3] + " " + UrOutputs.actual_q[4] + " " + UrOutputs.actual_q[5]);
+            Console.WriteLine(UrOutputs.actual_q[0] * 180/Math.PI + " " + UrOutputs.actual_q[1] * 180 / Math.PI + " " + UrOutputs.actual_q[2] * 180 / Math.PI + " " + UrOutputs.actual_q[3] * 180 / Math.PI + " " + UrOutputs.actual_q[4] * 180 / Math.PI + " " + UrOutputs.actual_q[5] * 180 / Math.PI);
 
             //Console.WriteLine(UrOutputs.target_q[0] + " " + UrOutputs.target_q[1] + " " + UrOutputs.target_q[2] + " " + UrOutputs.target_q[3] + " " + UrOutputs.target_q[4] + " " + UrOutputs.target_q[5]);
             //Console.WriteLine(UrOutputs.output_int_register_0);
