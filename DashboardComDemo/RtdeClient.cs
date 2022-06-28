@@ -245,7 +245,78 @@ namespace Ur_Rtde
             }
             catch { return false; }
         }
-        
+        public string DashConnectAndCommand(string ipAddress,string Command)
+        {
+            System.Net.Sockets.TcpClient tcp = null;
+            try
+            {
+                tcp = new System.Net.Sockets.TcpClient();
+                tcp.ReceiveTimeout = 2000;
+                tcp.SendTimeout = 500;
+                tcp.Connect(ipAddress, 29999);
+                             
+                using (var stream = tcp.GetStream())
+                {
+                    using (var reader = new System.IO.StreamReader(stream))
+                    {
+                        if (Command == null)
+                        {
+                            var answer = reader.ReadLine();
+                            return answer.ToString();
+                        }
+                        else
+                        { 
+                            reader.ReadLine();//Throw away first line
+                            var bytes = System.Text.Encoding.UTF8.GetBytes($"{Command}\r\n");
+                            stream.Write(bytes, 0, bytes.Length);
+                            var answer = reader.ReadLine();
+                            return answer.ToString();
+                        }
+                    }
+                }
+            }
+            finally
+            {
+                tcp?.Close();
+            }
+        }//Connects to the dashboard port of UR port 29999
+        public bool URscriptCommand(string ipAddress, string Command)
+        {
+            System.Net.Sockets.TcpClient tcp = null;
+            try
+            {
+                if (ipAddress != "")
+                {
+                    tcp = new System.Net.Sockets.TcpClient();
+                    tcp.ReceiveTimeout = 2000;
+                    tcp.SendTimeout = 500;
+                    tcp.Connect(ipAddress, 30002);
+
+                    using (var stream = tcp.GetStream())
+                    {
+                        using (var reader = new System.IO.StreamReader(stream))
+                        {
+                            //reader.ReadLine();//Throw away first line
+                            var bytes = System.Text.Encoding.UTF8.GetBytes($"{Command}\r\n");
+                            stream.Write(bytes, 0, bytes.Length);
+                            //var answer = reader.ReadLine();
+                            return true;
+                        }
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally
+            {
+                tcp?.Close();
+            }
+        }//Connects to the dashboard port of UR port 29999
+
+    
+
         private void AsynchReceive(IAsyncResult ar)
         {
             
@@ -461,5 +532,6 @@ namespace Ur_Rtde
             this.UrStructInput = UrStruct;
             return Setup_Ur_InputsOutputs(RTDE_Command.CONTROL_PACKAGE_SETUP_INPUTS, UrStruct, out UrStructInputDecoder);
         }
+       
     }
 }

@@ -49,9 +49,9 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="ObservableCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RobotPoses.cs" />
     <Compile Include="RtdeClient.cs" />
     <Compile Include="UR_Data.cs" />
     <EmbeddedResource Include="Main.resx">
@@ -77,6 +77,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HoloDashboard\RyValue.html" />
+    <Content Include="HoloDashboard\RzValue.html" />
+    <Content Include="HoloDashboard\RxValue.html" />
+    <Content Include="HoloDashboard\ZValue.html" />
+    <Content Include="HoloDashboard\YValue.html" />
+    <Content Include="HoloDashboard\XValue.html" />
     <Content Include="HoloDashboard\CamsDashboard.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
