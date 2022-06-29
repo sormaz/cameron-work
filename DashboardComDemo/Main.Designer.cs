@@ -47,13 +47,13 @@
             this.lblDashboardStatus = new System.Windows.Forms.Label();
             this.btnSendCommand = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.lbRobotPoses = new System.Windows.Forms.ListBox();
             this.lblUrScriptStatus = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.lbRobotPoses = new System.Windows.Forms.ListBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -273,6 +273,35 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "URscript commands";
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(276, 385);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(108, 44);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Remove selected pose";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(143, 385);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(108, 44);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Record current pose";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // lbRobotPoses
+            // 
+            this.lbRobotPoses.FormattingEnabled = true;
+            this.lbRobotPoses.ItemHeight = 16;
+            this.lbRobotPoses.Location = new System.Drawing.Point(11, 40);
+            this.lbRobotPoses.Name = "lbRobotPoses";
+            this.lbRobotPoses.Size = new System.Drawing.Size(373, 308);
+            this.lbRobotPoses.TabIndex = 11;
+            // 
             // lblUrScriptStatus
             // 
             this.lblUrScriptStatus.AutoSize = true;
@@ -308,34 +337,6 @@
             this.button4.Text = "Send Command";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // lbRobotPoses
-            // 
-            this.lbRobotPoses.FormattingEnabled = true;
-            this.lbRobotPoses.ItemHeight = 16;
-            this.lbRobotPoses.Location = new System.Drawing.Point(11, 40);
-            this.lbRobotPoses.Name = "lbRobotPoses";
-            this.lbRobotPoses.Size = new System.Drawing.Size(373, 308);
-            this.lbRobotPoses.TabIndex = 11;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(143, 385);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(108, 44);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Record current pose";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(276, 385);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(108, 44);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Remove selected pose";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // Main
             // 

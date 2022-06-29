@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.IO;
 using System.ComponentModel;
+using Microsoft.Data.Sqlite;
 
 namespace DashboardComDemo
 {
@@ -201,6 +202,12 @@ namespace DashboardComDemo
            lblDashboardStatus.Text = Ur3.DashConnectAndCommand(ipAddress, null);
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int num = lbRobotPoses.SelectedIndex;
+            poses.Remove(poses[num]);
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (cbDashboardCommand.SelectedIndex!=-1) { lblDashStatus.Text = Ur3.DashConnectAndCommand(ipAddress, cbDashboardCommand.Text); }
@@ -213,6 +220,31 @@ namespace DashboardComDemo
             poses.Add(new RobotPoses() { Value = "movej(p[.170,-.413,.494,1.959,0.894,0.082],a=3,v=0.75,t=0,r=0)", Text = "MoveJ 2" });
             lbRobotPoses.DisplayMember = "Text";
             lbRobotPoses.DataSource = poses;
+
+            
+            //using (var connection = new SqliteConnection("Data Source = Test.db"))
+            //{
+            //    connection.Open();
+
+            //    //var command = connection.CreateCommand();
+            //    //command.CommandText =
+            //    //@"
+            //    //    SELECT name
+            //    //    FROM user
+            //    //    WHERE id = $id
+            //    //";
+            //    //command.Parameters.AddWithValue("$id", id);
+
+            //    //using (var reader = command.ExecuteReader())
+            //    //{
+            //    //    while (reader.Read())
+            //    //    {
+            //    //        var name = reader.GetString(0);
+
+            //    //        Console.WriteLine($"Hello, {name}!");
+            //    //    }
+            //    //}
+            //}
         }
 
         private void button4_Click(object sender, EventArgs e)
