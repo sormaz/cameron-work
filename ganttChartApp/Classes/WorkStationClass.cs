@@ -183,8 +183,7 @@ namespace ganttChartApp
             List<Task> tasks = MakeAllTasks();
             List<Task> Sw = new List<Task>();
             List<Task> Sr = new List<Task>();
-            List<Task> Srw = new List<Task>();
-            List<Task> processTask = new List<Task>();
+            List<Task> Srw = new List<Task>();            
 
             //Step 1: Identify all unassigned tasks
             foreach (Task t in tasks)
@@ -211,16 +210,15 @@ namespace ganttChartApp
                         throw new Exception($"Task {t.Name} does not use robot or worker");
                     }
                 }
-
-                if (!t.ImmediatePredecessorCheck(t))
-                {
-                    processTask.Add(t);
-                }
-                else
-                {
-
-                }
             }
+            //if (!t.ImmediatePredecessorCheck(t))
+            //{
+            //    processTask.Add(t);
+            //}
+            //else
+            //{
+
+            //}
         }
     }
 }

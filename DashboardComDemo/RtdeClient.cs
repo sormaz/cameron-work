@@ -285,7 +285,7 @@ namespace Ur_Rtde
             System.Net.Sockets.TcpClient tcp = null;
             try
             {
-                if (ipAddress != "")
+                if (ipAddress != "" || ipAddress != null)
                 {
                     tcp = new System.Net.Sockets.TcpClient();
                     tcp.ReceiveTimeout = 2000;
@@ -314,9 +314,6 @@ namespace Ur_Rtde
                 tcp?.Close();
             }
         }//Connects to the dashboard port of UR port 29999
-
-    
-
         private void AsynchReceive(IAsyncResult ar)
         {
             
@@ -520,7 +517,7 @@ namespace Ur_Rtde
             return false;
         }
 
-        //default freq was 125
+        //default freq was 125Hz which is the max
         public bool Setup_Ur_Outputs(object UrStruct, double Frequency=1)
         {
             this.UrStructOuput = UrStruct;

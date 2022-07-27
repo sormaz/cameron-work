@@ -20,7 +20,7 @@ namespace Mycode
             Ur3.OnSockClosed += new EventHandler(Ur3_OnSockClosed);
 
             //Attempt to connect to RTDE server host protocol version 2
-            Ur3.Connect("10.130.252.69",2);
+            Ur3.Connect("10.130.255.117",2);
             //Ur3.Connect("192.168.50.84", 2);
 
 

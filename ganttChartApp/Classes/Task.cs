@@ -13,7 +13,7 @@ namespace ganttChartApp
         private string precedence;
         private List<Task> prevtasks = new List<Task>();
         private List<Task> nexttasks = new List<Task>();
-        private bool completed = false;
+        private bool assigned = false;
         private Process selectedProcess;
 
         public Product Product
@@ -31,10 +31,10 @@ namespace ganttChartApp
             get { return precedence; }
             set { precedence = value; }
         }
-        public bool Completed
+        public bool Assigned
         {
-            get { return completed; }
-            set { completed = value; }
+            get { return assigned; }
+            set { assigned = value; }
         }
         public Task(string name, string precedence)
         {
@@ -67,7 +67,7 @@ namespace ganttChartApp
         {
             foreach (Task t in prevtasks)
             {
-                if (!t.completed)
+                if (!t.assigned)
                 {
                     return false;
                 }
@@ -94,15 +94,17 @@ namespace ganttChartApp
             }
             return result;
         }
-        public bool ImmediatePredecessorCheck(Task t)
-        {
-            if (t.Precedence == "")
-            {
-                return false;
-            }
-            return true;
+        //public bool ImmediatePredecessorCheck(Task task)
+        //{
+        //    foreach(Task t in prevtasks)
+        //    {
+        //        if(!t.Assigned)
+        //        {
+                    
+        //        }
+        //    }
 
-        }
+        //}
         //public List<Task> PredecessorNeeded(Task task)
         //{
         //    List<Task> result = new List<Task>();
