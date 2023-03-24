@@ -79,15 +79,15 @@ namespace ganttChartApp
             List<ResourceType> result = new List<ResourceType>();
             foreach (Process p in _processes)
             {
-                if (p.Resource.Name == ResourceType.NONE.ToString())
+                if (p.Resource.Name.Equals(ResourceType.NONE.ToString(), System.StringComparison.OrdinalIgnoreCase) )
                 {
                     result.Add(ResourceType.NONE);
                 }
-                else if (p.Resource.Name == ResourceType.ROBOT.ToString())
+                else if (p.Resource.Name.Equals( ResourceType.ROBOT.ToString(), System.StringComparison.OrdinalIgnoreCase) )
                 {
                     result.Add(ResourceType.ROBOT);
                 }
-                else if (p.Resource.Name == ResourceType.WORKER.ToString())
+                else if (p.Resource.Name.Equals(ResourceType.WORKER.ToString(), System.StringComparison.OrdinalIgnoreCase) )
                 {
                     result.Add(ResourceType.WORKER);
                 }
